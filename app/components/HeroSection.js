@@ -11,12 +11,23 @@ import styles from './HeroSection.module.css';
 const HeroSection = () => {
   const [greeting, setGreeting] = useState('Hello');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const hour = new Date().getHours();
     if (hour < 12) setGreeting('Good Morning');
     else if (hour < 18) setGreeting('Good Afternoon');
     else setGreeting('Good Evening');
+  }, []);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   // Mouse parallax effect
@@ -286,17 +297,19 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className={styles.scrollIndicator}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        onClick={scrollToProjects}
-      >
-        <span>Explore My Work</span>
-        <FaArrowDown className={styles.arrowIcon} />
-      </motion.div>
+      {/* Scroll Indicator - Desktop Only */}
+      {!isMobile && (
+        <motion.div
+          className={styles.scrollIndicator}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}
+          onClick={scrollToProjects}
+        >
+          <span>Explore My Work</span>
+          <FaArrowDown className={styles.arrowIcon} />
+        </motion.div>
+      )}
     </section>
   );
 };
