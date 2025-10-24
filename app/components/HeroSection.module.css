@@ -1,7 +1,7 @@
 /* Hero Section */
 .heroSection {
   position: relative;
-  min-height: 100vh;
+  min-height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -337,6 +337,7 @@
 .heroSocials {
   display: flex;
   gap: 1rem;
+      margin-bottom: 15px;
 }
 
 .heroSocials a {
@@ -540,6 +541,7 @@
 @media (max-width: 768px) {
   .heroSection {
     margin-top: 2rem;
+    min-height: 90vh;
   }
 
   .heroContainer {
@@ -611,7 +613,7 @@
 
 @media (max-width: 480px) {
   .heroSection {
-    padding: 0 1.5rem 4rem 1.5rem;
+    padding: 0 1.5rem 0rem 1.5rem;
   }
 
   .heroContainer {
