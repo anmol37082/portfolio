@@ -1,0 +1,560 @@
+/* About Section */
+.aboutSection {
+  position: relative;
+  padding: 4rem 0 8rem 0;
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.subtitle {
+  display: inline-block;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.titleUnderline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Content Grid */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Left Content */
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Info Cards */
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.infoCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.infoIcon {
+  font-size: 2rem;
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.infoCard h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.infoCard p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Story Section */
+.story {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
+}
+
+.story h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.story p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #495057;
+  margin-bottom: 1.25rem;
+}
+
+.story p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Section */
+.skillsSection {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.skillsSection h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.skillItem {
+  margin-bottom: 1.75rem;
+}
+
+.skillItem:last-child {
+  margin-bottom: 0;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.skillName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.skillPercent {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.skillBar {
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skillProgress {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.skillProgress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Right Content */
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 100px;
+}
+
+/* Values Grid */
+.valuesGrid {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.valuesTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.valuesCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.valueCard {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.valueCard:hover {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.valueCard h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.valueCard p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Fun Fact Box */
+.funFact {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+  color: white;
+}
+
+.funFactIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.funFactContent h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.funFactContent p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.funFactContent strong {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+/* CTA Box */
+.ctaBox {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 2px solid #e9ecef;
+}
+
+.ctaBox h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.ctaBox p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+}
+
+.btnSecondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btnSecondary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Decorative Elements */
+.decorativeCircle1,
+.decorativeCircle2 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  z-index: 1;
+}
+
+.decorativeCircle1 {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  right: -100px;
+  animation: float 20s infinite ease-in-out;
+}
+
+.decorativeCircle2 {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  left: -50px;
+  animation: float 25s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .rightContent {
+    position: static;
+  }
+
+  .infoCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 5rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .infoCards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .infoCard {
+    padding: 1.25rem;
+  }
+
+  .story,
+  .skillsSection,
+  .valuesGrid,
+  .ctaBox {
+    padding: 2rem;
+  }
+
+  .story h3,
+  .skillsSection h3,
+  .valuesTitle,
+  .ctaBox h3 {
+    font-size: 1.5rem;
+  }
+
+  .valuesCards {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+  }
+
+  .funFact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .decorativeCircle1,
+  .decorativeCircle2 {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .story p,
+  .ctaBox p {
+    font-size: 0.95rem;
+  }
+
+  .story,
+  .skillsSection,
+  .valuesGrid,
+  .ctaBox,
+  .funFact {
+    padding: 1.5rem;
+  }
+
+  .valueCard {
+    padding: 1.5rem 1rem;
+  }
+
+  .skillItem {
+    margin-bottom: 1.5rem;
+  }
+
+  .decorativeCircle1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .decorativeCircle2 {
+    width: 200px;
+    height: 200px;
+  }
+}

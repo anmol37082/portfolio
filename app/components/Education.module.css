@@ -1,0 +1,281 @@
+/* Education Section */
+.educationSection {
+  position: relative;
+  padding: 4rem 0 8rem 0;
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.subtitle {
+  display: inline-block;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.titleUnderline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.sectionDescription {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Education Timeline */
+.educationTimeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.educationCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.educationCard:hover {
+  border-color: rgba(102, 126, 234, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.cardIcon {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.cardContent {
+  margin-left: 100px;
+}
+
+.degree {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.institution,
+.duration {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #667eea;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.highlights {
+  color: #495057;
+  line-height: 1.6;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Timeline Connector */
+.connector {
+  position: absolute;
+  left: 55px;
+  top: 100%;
+  width: 2px;
+  height: 2rem;
+  background: linear-gradient(to bottom, #667eea, transparent);
+}
+
+/* Decorative Elements */
+.decorativeCircle1,
+.decorativeCircle2 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  z-index: 1;
+}
+
+.decorativeCircle1 {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  right: -100px;
+  animation: float 20s infinite ease-in-out;
+}
+
+.decorativeCircle2 {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  left: -50px;
+  animation: float 25s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .educationCard {
+    padding: 2rem;
+  }
+
+  .cardIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .cardContent {
+    margin-left: 80px;
+  }
+
+  .degree {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .educationSection {
+    padding: 5rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .educationCard {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cardIcon {
+    position: static;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+
+  .cardContent {
+    margin-left: 0;
+  }
+
+  .degree {
+    font-size: 1.2rem;
+  }
+
+  .connector {
+    display: none;
+  }
+
+  .decorativeCircle1,
+  .decorativeCircle2 {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .educationSection {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .educationCard {
+    padding: 1.5rem;
+  }
+
+  .decorativeCircle1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .decorativeCircle2 {
+    width: 200px;
+    height: 200px;
+  }
+}
